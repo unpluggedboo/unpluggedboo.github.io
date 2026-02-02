@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lars Arntsen | PhD Applicant</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #2c3e50;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      padding: 1rem 1.5rem;
+      z-index: 999;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    header img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #2c3e50;
+      flex-shrink: 0;
+    }
+
+    .header-text {
+      flex: 1 1 300px;
+      min-width: 250px;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .header-text h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    .header-text p.tagline {
+      font-style: italic;
+      color: #555;
+      margin-bottom: 0.25rem;
+    }
+
+    .header-text p:not(.tagline) {
+      margin-top: 0.1rem;
+      margin-bottom: 0.1rem;
+    }
+
+    .cv-link {
+      display: inline-block;
+    }
+
+    .buttons {
+      margin-top: 0.4rem;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      padding: 6px 10px;
+      background-color: #2c3e50;
+      color: #fff;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      transition: background-color 0.2s ease;
+      line-height: 1.2;
+    }
+
+    .button:hover {
+      background-color: #34495e;
+    }
+
+    .icon {
+      width: 20px;
+      height: 20px;
+      fill: #ffffff;
+    }
+
+    .header-nav {
+      display: flex;
+      justify-content: center;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      font-weight: 600;
+      font-size: 1rem;
+      white-space: nowrap;
+      width: 100%;
+      margin-top: 0.25rem;
+    }
+
+    .header-nav a {
+      color: #2c3e50;
+      text-decoration: none;
+      padding: 6px 10px;
+      border-radius: 4px;
+      transition: background-color 0.2s ease;
+    }
+
+    .header-nav a:hover,
+    .header-nav a:focus {
+      background-color: #d6e0f0;
+      outline: none;
+    }
+
+    /* Spacer to offset fixed header */
+    .spacer {
+      height: 220px; /* same height as fixed header */
+      width: 100%;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto 2rem; /* no top margin needed */
+      padding: 2rem;
+      background-color: #ffffff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    h2 {
+      margin-top: 2rem;
+      color: #34495e;
+    }
+
+    /* Remove offset styling on #about */
+    #about {
+      /* no offset styles needed */
+    }
+
+    a {
+      color: #2980b9;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    ul {
+      padding-left: 1.25rem;
+    }
+
+    li {
+      margin-bottom: 1rem;
+    }
+
+    @media screen and (max-width: 900px) {
+      .header-nav {
+        font-size: 0.9rem;
+        gap: 0.4rem;
+      }
+    
+      .header-nav a {
+        padding: 4px 8px;
+      }
+    }
+
+    /* Hide nav on mobile by default */
+    @media screen and (max-width: 800px) {
+      .header-nav {
+        display: none;
+      }
+    
+      .spacer {
+        display: none;
+      }
+    
+      header {
+        position: static;
+        box-shadow: none;
+      }
+    
+      body {
+        padding-top: 0;
+      }
+    }
+
+    .header-nav {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scrollbar-width: none; /* Firefox */
+    }
+    
+    .header-nav::-webkit-scrollbar {
+      display: none; /* Chrome, Safari */
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="Headshot.jpg" alt="Lars Arntsen Headshot" />
+    <div class="header-text">
+      <h1>Lars Arntsen</h1>
+      <p class="tagline">Biomedical Engineer | Researcher | Aspiring PhD Student</p>
+      <p>
+        Email: <a href="mailto:larspwarntsen@gmail.com">larspwarntsen@gmail.com</a> |
+        <a class="cv-link" href="LarsArntsenCV.pdf" download>Download CV</a>
+      </p>
+      <div class="buttons">
+        <a class="button" href="https://github.com/larspwarntsen" target="_blank" rel="noopener noreferrer">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.92.58.11.79-.25.79-.55v-2c-3.2.7-3.87-1.54-3.87-1.54-.52-1.32-1.26-1.67-1.26-1.67-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.18 1.74 1.18 1.01 1.73 2.65 1.23 3.3.94.1-.73.4-1.24.72-1.52-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.3 1.18-3.11-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.18-1.49 3.14-1.18 3.14-1.18.63 1.57.24 2.73.12 3.02.74.81 1.18 1.85 1.18 3.11 0 4.41-2.69 5.38-5.25 5.66.41.35.76 1.04.76 2.11v3.12c0 .3.21.66.8.55A10.52 10.52 0 0 0 23.5 12c0-6.27-5.23-11.5-11.5-11.5z"/>
+          </svg>
+          GitHub
+        </a>
+        <a class="button" href="https://www.linkedin.com/in/lars-arntsen/" target="_blank" rel="noopener noreferrer">
+          <svg class="icon" viewBox="0 0 448 512" aria-hidden="true" focusable="false">
+            <path d="M100.28 448H7.4V148.9h92.88zM53.84 108.1C24.1 108.1 0 83.9 0 54.4 0 24.9 24.1.7 53.84.7c29.74 0 53.44 24.2 53.44 53.7 0 29.5-23.7 53.7-53.44 53.7zm394.06 339.9h-92.4V303.6c0-34.7-12.4-58.4-43.4-58.4-23.7 0-37.8 16-44 31.4-2.3 5.4-2.8 13-2.8 20.6v150.9h-92.4s1.2-239.2 0-264h92.4v37.4c12.3-19 34.4-46.2 83.6-46.2 61 0 106.8 39.8 106.8 125.4V448z"/>
+          </svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+    
+    <nav class="header-nav" aria-label="Primary navigation">
+      <a href="#about">About</a>
+      <a href="#research-experience">Research Experience</a>
+      <a href="#research-projects">Research Projects</a>
+      <a href="#publications">Publications</a>
+      <a href="#industry-experience">Industry Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Spacer to offset fixed header -->
+  <div class="spacer"></div>
+
+  <div class="container">
+    <h2 id="about">About</h2>
+    <p>I recently graduated from Rensselaer Polytechnic Institute with a B.S. in Biomedical Engineering and a minor in Healthcare Markets.</p>
+    <p>I’m passionate about translational and interdisciplinary research, particularly in developing medical and wearable devices that advance personalized medicine and leverage technology to prevent and treat disease. My interests focus on innovations that address chronic conditions and mental health — areas where long-term solutions can meaningfully improve quality of life. I’m drawn to projects that span the full device pipeline, from problem identification and design to testing and iteration.</p>
+    <p>Currently, I’m applying to PhD programs and pursuing scholarships to support my graduate studies, with the goal of continuing to develop technologies that help people live longer, healthier lives.</p>
+
+    <h2 id="research-experience">Research Experience</h2>
+    <div style="margin-bottom: 2rem;">
+      <strong>Visiting Researcher</strong> | Deep Imaging Analytics Lab | Rensselaer Polytechnic Institute<br>
+      <em>May 2025 – Present | Troy, NY </em>
+      <br><br>
+      At DIAL, I began with a literature review on reinforcement learning and reproduced a prior lab member’s multimodal classifier for predicting blood-brain barrier permeability using SMILES strings. This sparked my interest in how AI could accelerate drug discovery. I then proposed a new project to <a href="https://dial.rpi.edu/people/pingkun-yan" target="_blank" style="color: #2c3e50; font-weight: bold; text-decoration: underline;">Dr. Pingkun Yan</a> focused on generating valid, novel SMILES optimized for CNS-relevant properties using reinforcement learning. This became the primary focus of my work in the lab. 
+      <br><br>
+      <a href="https://dial.rpi.edu" class="button" target="_blank">Visit DIAL Website</a>
+    </div>
+    
+    <div style="margin-bottom: 2rem;">
+      <strong>Researcher and Co-Author</strong> | Rensselaer Polytechnic Institute<br>
+      <em>Sep 2023 – May 2024 | Troy, NY</em>
+      <br><br>
+      During my junior year at Rensselaer, I reached out to <a href="https://faculty.rpi.edu/nancy-campbell" target="_blank" style="color: #2c3e50; font-weight: bold; text-decoration: underline;">Dr. Nancy Campbell</a> to ask if she needed any help with her upcoming research. As a former athlete, I was especially drawn to a project she was starting on extreme sports athletes and how modern frameworks of addiction intersect with their experiences. Over the course of several months, we met weekly to discuss our progress and exchange ideas. Eventually, she invited me to join the project as a co-author.
+      <br>
+    </div>
+    
+    <div style="margin-bottom: 2rem;">
+      <strong>Research Assistant</strong> | Human Systems Neuroscience Lab | Boston University<br>
+      <em>Apr 2019 – Aug 2019 | Boston, MA</em>
+      <br><br>
+      During the summer before my senior year of high school, I would travel an hour and half via bike, train, and subway to the Human Systems Neuroscience Lab at Boston University. This was my first exposure to research where my love for science blossomed. <a href="https://www.bu.edu/crescent/profiles/basilis-zikopoulos/" target="_blank" style="color: #2c3e50; font-weight: bold; text-decoration: underline;">Dr. Basilis Zikopoulos</a> and <a href="https://www.researchgate.net/profile/Miguel_Angel_Garcia-Cabezas2" target="_blank" style="color: #2c3e50; font-weight: bold; text-decoration: underline;">Dr. Miguel &Aacute;ngel Garc&iacute;a Cabezas</a> selflessly and consistently offered up their time for spontaneous lessons on neuroscience and human anatomy while encouraging my curiosity as a young researcher. I assisted a postdoc with their project of mapping out the hypothalamus neural networks by tracing EM images of neurons. 
+      <br>
+    </div>
+    
+    <h2 id="research-projects">Research Projects</h2>
+    <ul>
+      <li><strong>Multimodal AI for de novo CNS Drug Design via Molecular Generation</strong> – Developed a SMILES-based molecular generator fine-tuned with reinforcement learning and guided by multimodal property classifiers to design CNS-optimized compounds with high validity and desirable pharmacological profiles. <br></li>
+      <li><strong>Design and Development of a Wearable Device for Gait and Sedentary Behavior Analysis</strong> – Designed a motion-tracking device with IMU + ML classifier for elder care.<br> <a href="SitiWearPitch.pdf" download>Download Device Pitch</a></li>
+      <li><strong>A Deep Learning Pipeline for Skin Lesion Segmentation and Classification</strong> – Combined CNN classification with U-Net-based segmentation to improve lesion detection.<br></li>
+      <li><strong>Medicalization of Extreme Sports Athletes in a Risk Regulatory Society</strong> – Analyzed how medical frameworks are used to classify and manage risk-taking behavior in athletic subcultures. This work was presented at RPI’s Annual Undergraduate Research Symposium.<br></li>
+    </ul>
+
+    <h2 id="publications">Publications & Conference Appearances</h2>
+    <ul>
+      <li>“De Novo CNS Drug Generation via Multimodal AI and SHAP-Guided Reinforcement Learning,” BMES Conference Presentation, 2025 — Chosen as 1 of 70 out of 704 accepted abstracts for an oral presentation<br>
+          <a href="BMES_Presentation.pdf" download>Download Presentation</a>
+      </li>
+      <li>Campbell, Nancy (PhD), and Lars Arntsen. “Medicalization of Extreme Sports Athletes in a Risk Regulatory Society.” Addiction and the Medicalisation of Conspicuous Behaviour: New Critical Perspectives, January 2026. English.<br>
+      <br>
+        <a href="https://link.springer.com/book/9783032063120" class="button" target="_blank">Volume Overlook</a>
+      </li>
+    </ul>
+
+    <h2 id="industry-experience">Industry Experience</h2>
+    <div style="margin-bottom: 2rem;">
+      <strong>Senior Paralegal - Complaint Resolution Specialist</strong> | Massachusetts Department of Public Health<br>
+      <em>Sep 2025 – Current | Boston, MA </em>
+      <br><br>
+      At the Massachusetts Board of Registration in Nursing, I work under attorney Carolyn DeSpirito to support post-hearing case processing. My responsibilities include preparing and sending formal correspondence to licensees, tracking rulings during board meetings, and maintaining organized internal records. I also assist in investigations into fraudulent nursing programs and help present findings to the board. Additionally, I communicate with licensees throughout the complaint process to ensure procedural clarity and compliance. 
+      <br><br>
+      <a href="https://www.mass.gov/orgs/board-of-registration-in-nursing" class="button" target="_blank">Visit BORN Website</a>
+    </div>
+    
+    <div style="margin-bottom: 2rem;">
+      <strong>Lab Operations Intern</strong> | Ultragenyx Pharmaceuticals<br>
+      <em>June 2023 – Aug 2023 | Woburn, MA </em>
+      <br><br>
+      At Ultragenyx Pharmaceuticals, I supported the Quality Control (QC) team by managing sample logistics and maintaining GMP documentation. I led inventory optimization efforts and updated laboratory protocols to improve operational efficiency. Additionally, I ensured laboratory facilities remained fully functional by coordinating equipment maintenance, tracking service schedules, and assisting QC scientists with their daily testing activities. 
+      <br><br>
+      <a href="https://www.ultragenyx.com/" class="button" target="_blank">Visit Ultragenyx Website</a>
+    </div>
+    
+    <div style="margin-bottom: 2rem;">
+      <strong>Product Development Consultant</strong> | LetsGetChecked<br>
+      <em>Jun 2022 – Sep 2023 | Danvers, MA</em>
+      <br><br>
+      At LetsGetChecked, I curated mutation data for over 13,000 genes to support the development of more efficient and accurate genetic testing workflows. I also worked closely with the Director of the lab to enhance the company’s portfolio of genetic testing products, contributing to improvements in clinical relevance and data quality.
+      <br><br>
+      <a href="https://www.letsgetchecked.com/?srsltid=AfmBOorDs3RkaBUuo-zeVn1bBheLm_UhwA2SQceeyAIAH0WUwbVLH48g" class="button" target="_blank">Visit LetsGetChecked Website</a>
+    </div>
+    
+    <div style="margin-bottom: 2rem;">
+      <strong>Lab Operations Intern</strong> | Veritas Genetics<br>
+      <em>Nov 2020 – Aug 2021 | Danvers, MA</em>
+      <br><br>
+      At Veritas Genetics, I processed thousands of COVID-19 diagnostic tests and coordinated region-wide sample logistics to ensure rapid turnaround and accuracy. I also developed internal software tools to streamline sample accessioning and data management. Throughout my work, I ensured full compliance with CAP, CLIA, HIPAA, and OSHA standards to maintain laboratory quality and regulatory integrity. 
+      <br><br>
+      <a href="https://www.veritasint.com/" class="button" target="_blank">Visit LetsGetChecked Website (Acquired Veritas Genetics)</a>
+    </div>
+    
+    <h2 id="contact">Contact</h2>
+    <p>Feel free to reach out via email or connect using the buttons above.</p>
+  </div>
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $("a[href^='#']").on('click', function(event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+        const hash = this.hash;
+        const headerHeight = $('header').outerHeight();
+
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top - headerHeight - 10
+        }, 800);
+
+        // Use pushState to update URL without triggering jump
+        history.pushState(null, null, hash);
+      }
+    });
+  });
+</script>
+  
+</body>
+</html>
