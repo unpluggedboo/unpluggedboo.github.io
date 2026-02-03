@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive Valentine</title>
+<style>
+body {margin:0; font-family: Arial,sans-serif; background: linear-gradient(to bottom right,#ff9a9e,#fad0c4); color:white; text-align:center; padding:20px; overflow:hidden;}
+nav {margin-bottom:20px;}
+nav a {color:white; margin:0 10px; text-decoration:none; font-weight:bold;}
+nav a:hover{text-decoration:underline;}
+button {padding:15px 30px; font-size:20px; border-radius:12px; border:none; cursor:pointer; background:white; color:#ff4d6d; transition:transform 0.2s;}
+button:hover {transform:scale(1.1); background:#ffe6eb;}
+.heart {position:absolute; width:20px; height:20px; background:red; transform:rotate(45deg); animation:float 4s linear infinite;}
+.heart::before, .heart::after {content:""; position:absolute; width:20px; height:20px; background:red; border-radius:50%;}
+.heart::before {top:-10px; left:0;} .heart::after {left:10px; top:0;}
+@keyframes float {0% {transform:translateY(0) rotate(45deg); opacity:1;} 100% {transform:translateY(-800px) rotate(45deg); opacity:0;}}
+</style>
+</head>
+<body>
+<nav>
+<a href="index.html">Home</a> |
+<a href="story.html">Our Story</a> |
+<a href="video.html">Video</a> |
+<a href="plan.html">Valentine Plan</a> |
+<a href="interactive.html">Interactive</a>
+</nav>
+
+<h1>Will You Be My Valentine? 💖</h1>
+<p>Click the button for a surprise message!</p>
+<button onclick="showLove()">Click Me 💌</button>
+
+<script>
+function showLove() {
+    alert("I knew it! I love you more than words ❤️");
+    createHearts();
+}
+
+function createHearts() {
+    for (let i=0; i<30; i++) {
+        let heart = document.createElement("div");
+        heart.classList.add("heart");
+        heart.style.left = Math.random()*window.innerWidth + "px";
+        heart.style.animationDuration = 2 + Math.random()*3 + "s";
+        heart.style.width = 10 + Math.random()*20 + "px";
+        heart.style.height = heart.style.width;
+        document.body.appendChild(heart);
+        setTimeout(()=>heart.remove(),4000);
+    }
+}
+</script>
+</body>
+</html>
