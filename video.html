@@ -3,34 +3,57 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Special Video</title>
+<title>Special Video 🎬</title>
 <style>
-body {margin:0; font-family: Arial,sans-serif; background: linear-gradient(to bottom right,#ff9a9e,#fad0c4); color:white; text-align:center; padding:20px;}
-nav {margin-bottom:20px;}
-nav a {color:white; margin:0 10px; text-decoration:none; font-weight:bold;}
-nav a:hover{text-decoration:underline;}
-video {max-width:80%; border-radius:12px; margin-top:20px;}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom right, #ff9a9e, #fad0c4);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+nav {
+  margin-bottom: 20px;
+}
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+.video-container {
+  margin-top: 30px;
+}
+video {
+  width: 80%;
+  max-width: 800px;
+  border-radius: 12px;
+}
 </style>
 </head>
 <body>
+
 <nav>
-<a href="index.html">Home</a> |
-<a href="story.html">Our Story</a> |
-<a href="video.html">Video</a> |
-<a href="plan.html">Valentine Plan</a> |
-<a href="interactive.html">Interactive</a>
+  <a href="index.html">Home</a> |
+  <a href="story.html">Our Story</a> |
+  <a href="video.html">Video</a> |
+  <a href="plan.html">Valentine Plan</a> |
+  <a href="interactive.html">Interactive</a>
 </nav>
+
 <h1>Our Special Video 🎬</h1>
-<p>Watch this special moment we created together!</p>
+<p>Watch this special moment just for you!</p>
 
-<!-- Local video (compress first if large) -->
-<!-- <video controls>
-  <source src="media/your-video.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video> -->
-
-<!-- OR embedded YouTube video -->
-<iframe width="80%" height="400" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+<div class="video-container">
+  <video controls>
+    <source src="https://drive.google.com/uc?export=download&id=1btcY36DmO_G3teLjWKYyD1ToKhjyatHa" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
 
 </body>
 </html>
