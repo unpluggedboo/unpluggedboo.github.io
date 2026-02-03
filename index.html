@@ -44,22 +44,40 @@ button:hover {
     background: #ffe6eb;
 }
 
-/* Collage Styles */
+/* Masonry Collage Styles */
 .collage {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
+    column-count: 4;      /* number of columns */
+    column-gap: 10px;
     max-width: 1000px;
     margin: 30px auto;
 }
 .collage img {
     width: 100%;
+    margin-bottom: 10px;
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     transition: transform 0.3s;
+    display: block;
 }
 .collage img:hover {
     transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+    .collage {
+        column-count: 3;
+    }
+}
+@media (max-width: 700px) {
+    .collage {
+        column-count: 2;
+    }
+}
+@media (max-width: 500px) {
+    .collage {
+        column-count: 1;
+    }
 }
 </style>
 </head>
@@ -72,7 +90,7 @@ button:hover {
 <p>Click the button below to start the adventure!</p>
 <a href="story.html"><button>Start</button></a>
 
-<!-- Photo Collage -->
+<!-- Masonry Photo Collage -->
 <div class="collage">
   <img src="media/1.jpeg" alt="Us 1">
   <img src="media/2.jpeg" alt="Us 2">
