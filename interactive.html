@@ -3,51 +3,150 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Interactive Valentine</title>
+<title>Big Question Time 💝</title>
+
 <style>
-body {margin:0; font-family: "Avenir", Arial,sans-serif; background: linear-gradient(to bottom right,#ff9a9e,#fad0c4); color:white; text-align:center; padding:20px; overflow:hidden;}
-nav {margin-bottom:20px;}
-nav a {color:white; margin:0 10px; text-decoration:none; font-weight:bold;}
-nav a:hover{text-decoration:underline;}
-button {padding:15px 30px; font-size:20px; border-radius:12px; border:none; cursor:pointer; background:white; color:#ff4d6d; transition:transform 0.2s;}
-button:hover {transform:scale(1.1); background:#ffe6eb;}
-.heart {position:absolute; width:20px; height:20px; background:red; transform:rotate(45deg); animation:float 4s linear infinite;}
-.heart::before, .heart::after {content:""; position:absolute; width:20px; height:20px; background:red; border-radius:50%;}
-.heart::before {top:-10px; left:0;} .heart::after {left:10px; top:0;}
-@keyframes float {0% {transform:translateY(0) rotate(45deg); opacity:1;} 100% {transform:translateY(-800px) rotate(45deg); opacity:0;}}
+body {
+  margin: 0;
+  font-family: "Avenir", Arial, sans-serif;
+  background: linear-gradient(to bottom right,#ff9a9e,#fad0c4);
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 30px;
+}
+
+.question-box {
+  background: rgba(255,255,255,0.15);
+  padding: 30px;
+  border-radius: 18px;
+  font-size: 28px;
+  max-width: 700px;
+  margin-bottom: 40px;
+  backdrop-filter: blur(6px);
+}
+
+.buttons {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+button {
+  padding: 18px 36px;
+  font-size: 22px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  background: white;
+  color: #ff4d6d;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.12);
+  background: #ffe6eb;
+}
+
+.yes-btn {
+  font-size: 26px;
+  padding: 22px 44px;
+}
+
+.no-btn {
+  background: #fff0f3;
+}
+
+/* hearts */
+
+.heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: red;
+  transform: rotate(45deg);
+  animation: float 4s linear forwards;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 50%;
+}
+
+.heart::before { top: -10px; left: 0; }
+.heart::after { left: 10px; top: 0; }
+
+@keyframes float {
+  0% { transform: translateY(0) rotate(45deg); opacity:1; }
+  100% { transform: translateY(-900px) rotate(45deg); opacity:0; }
+}
 </style>
 </head>
-<body>
-<nav>
-<a href="index.html">Home</a> |
-<a href="story.html">Our Story</a> |
-<a href="video.html">Video</a> |
-<a href="plan.html">Valentine Plan</a> |
-<a href="interactive.html">Interactive</a>
-</nav>
 
-<h1>Will You Be My Valentine? 💖</h1>
-<p>Click the button for a surprise message!</p>
-<button onclick="showLove()">Click Me 💌</button>
+<body>
+
+<div class="wrapper">
+
+<h1>Big Question Time 💝</h1>
+
+<div class="question-box">
+Avery Cosette Caggiano,<br>
+will you be my Valentine?
+</div>
+
+<div class="buttons">
+  <button class="yes-btn" onclick="sayYes()">YES 💖</button>
+  <button class="no-btn" onclick="sayNo()">No</button>
+</div>
+
+</div>
 
 <script>
-function showLove() {
-    alert("I knew it! I love you more than words ❤️");
-    createHearts();
+function sayYes() {
+  createHearts(60);
+  setTimeout(() => {
+    alert("Best decision ever. I love you ❤️");
+  }, 300);
 }
 
-function createHearts() {
-    for (let i=0; i<30; i++) {
-        let heart = document.createElement("div");
-        heart.classList.add("heart");
-        heart.style.left = Math.random()*window.innerWidth + "px";
-        heart.style.animationDuration = 2 + Math.random()*3 + "s";
-        heart.style.width = 10 + Math.random()*20 + "px";
-        heart.style.height = heart.style.width;
-        document.body.appendChild(heart);
-        setTimeout(()=>heart.remove(),4000);
-    }
+function sayNo() {
+  alert("Error: That option is not available 😌");
+}
+
+function createHearts(count) {
+  for (let i = 0; i < count; i++) {
+    let heart = document.createElement("div");
+    heart.className = "heart";
+    heart.style.left = Math.random() * window.innerWidth + "px";
+    heart.style.bottom = "-20px";
+    heart.style.animationDuration = (2 + Math.random() * 3) + "s";
+    heart.style.width = (12 + Math.random() * 18) + "px";
+    heart.style.height = heart.style.width;
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 4000);
+  }
 }
 </script>
+
 </body>
 </html>
