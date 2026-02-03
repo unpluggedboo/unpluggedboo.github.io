@@ -12,6 +12,7 @@ body {
     color: white;
     text-align: center;
 }
+
 nav {
     margin-top: 20px;
 }
@@ -24,9 +25,11 @@ nav a {
 nav a:hover {
     text-decoration: underline;
 }
+
 .container {
     padding: 50px;
 }
+
 button {
     padding: 15px 30px;
     font-size: 20px;
@@ -40,15 +43,47 @@ button {
 button:hover {
     background: #ffe6eb;
 }
+
+/* Collage Styles */
+.collage {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    max-width: 900px;
+    margin: 30px auto;
+}
+.collage img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+}
+.collage img:hover {
+    transform: scale(1.05);
+}
 </style>
 </head>
 <body>
+
 <div class="container">
 <h1>Avery</h1>
 <p>Brought to you by UnpluggedBoo Inc.</p>
 <p>Happy Valentine's Day</p>
 <p>Click the button below to start the adventure!</p>
 <a href="story.html"><button>Start</button></a>
+
+<!-- Photo Collage -->
+<div class="collage">
+  <img src="media/2025-09-06 03.26.59-2_Original.jpeg" alt="Us 1">
+  <img src="media/A2392319-0F27-4783-802A-80FF7DE61953.jpeg" alt="Us 2">
+  <img src="media/DSC04010.jpeg" alt="Us 3">
+  <img src="media/DSC04090.jpeg" alt="Us 4">
+  <img src="media/IMG_2337.jpeg" alt="Us 5">
+  <img src="media/IMG_2343.jpeg" alt="Us 6">
+  <img src="media/IMG_3588.jpeg" alt="Us 7">
+  <img src="media/IMG_4686.jpeg" alt="Us 8">
+  <img src="media/IMG_5006.jpeg" alt="Us 9">
+</div>
 
 <nav>
 <a href="index.html">Home</a> |
@@ -58,5 +93,6 @@ button:hover {
 <a href="interactive.html">Interactive</a>
 </nav>
 </div>
+
 </body>
 </html>
