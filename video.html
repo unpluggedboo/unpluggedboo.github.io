@@ -28,9 +28,11 @@ nav a:hover {
 .video-container {
   margin-top: 30px;
 }
-video {
+iframe {
   width: 80%;
   max-width: 800px;
+  height: 450px;
+  border: none;
   border-radius: 12px;
 }
 </style>
@@ -49,10 +51,9 @@ video {
 <p>Watch this special moment just for you!</p>
 
 <div class="video-container">
-  <video controls>
-    <source src="https://drive.google.com/uc?export=download&id=1btcY36DmO_G3teLjWKYyD1ToKhjyatHa" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+  <iframe src="https://drive.google.com/file/d/1btcY36DmO_G3teLjWKYyD1ToKhjyatHa/preview" 
+          allow="autoplay; encrypted-media" allowfullscreen>
+  </iframe>
 </div>
 
 </body>
