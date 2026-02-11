@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>You Said Yes 💖</title>
+<title>Big Question Time 💝</title>
 
 <style>
 body {
@@ -11,35 +11,42 @@ body {
   font-family: "Avenir", Arial, sans-serif;
   background: linear-gradient(to bottom right,#ff9a9e,#fad0c4);
   color: white;
+  text-align: center;
   overflow: hidden;
 }
 
-.overlay {
-  position: absolute;
-  inset: 0;
+.wrapper {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  padding: 30px;
+  padding: 20px;
 }
 
 h1 {
-  font-size: 56px;
-  margin: 0 0 20px;
-  text-shadow: 0 0 20px rgba(255,105,180,0.9);
+  font-size: 48px;
+  margin-bottom: 30px;
 }
 
-p {
-  font-size: 26px;
-  max-width: 800px;
-  line-height: 1.4;
-  text-shadow: 0 0 14px rgba(0,0,0,0.35);
+.question-box {
+  background: rgba(255,255,255,0.15);
+  padding: 30px;
+  border-radius: 18px;
+  font-size: 28px;
+  max-width: 700px;
+  margin-bottom: 40px;
+  backdrop-filter: blur(6px);
 }
 
-.button {
-  margin-top: 30px;
+.buttons {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+button {
   padding: 18px 36px;
   font-size: 22px;
   border-radius: 14px;
@@ -48,84 +55,98 @@ p {
   background: white;
   color: #ff4d6d;
   font-weight: bold;
-  transition: transform 0.2s, background 0.2s;
+  transition: transform 0.2s;
 }
 
-.button:hover {
-  transform: scale(1.1);
+button:hover {
+  transform: scale(1.12);
   background: #ffe6eb;
 }
 
-/* floating hearts */
+.yes-btn {
+  font-size: 26px;
+  padding: 22px 44px;
+}
+
+.no-btn {
+  background: #fff0f3;
+}
+
+/* hearts */
 
 .heart {
   position: absolute;
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   background: red;
   transform: rotate(45deg);
-  animation: float 5s linear forwards;
-  opacity: .9;
+  animation: float 4s linear forwards;
 }
 
 .heart::before,
 .heart::after {
   content: "";
   position: absolute;
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   background: red;
   border-radius: 50%;
 }
 
-.heart::before { top: -9px; left: 0; }
-.heart::after { left: 9px; top: 0; }
+.heart::before { top: -10px; left: 0; }
+.heart::after { left: 10px; top: 0; }
 
 @keyframes float {
-  to {
-    transform: translateY(-1000px) rotate(45deg);
-    opacity: 0;
-  }
+  0% { transform: translateY(0) rotate(45deg); opacity:1; }
+  100% { transform: translateY(-900px) rotate(45deg); opacity:0; }
 }
 </style>
 </head>
 
 <body>
 
-<div class="overlay">
-  <h1>You Said YES 💖</h1>
-  <p>
-    Best choice ever.  
-    I’m so lucky to have you — and this is just the beginning
-    of many more memories together.
-  </p>
+<div class="wrapper">
 
-  <button class="button" onclick="goToVideo()">Watch Your Feature Film 🎬</button>
+<h1>Big Question Time 💝</h1>
+
+<div class="question-box">
+Avery Cosette Caggiano,<br>
+will you be my Valentine?
+</div>
+
+<div class="buttons">
+  <button class="yes-btn" onclick="sayYes()">YES 💖</button>
+  <button class="no-btn" onclick="sayNo()">No</button>
+</div>
+
 </div>
 
 <script>
-function goToVideo() {
-  createHearts(80);
+function sayYes() {
+  createHearts(60);
   setTimeout(() => {
     window.open("newvideo.html", "_blank");
-  }, 600);
+  }, 500);
+}
+
+function sayNo() {
+  alert("Error: That option is not available 😌");
 }
 
 function createHearts(count) {
   for (let i = 0; i < count; i++) {
-    const heart = document.createElement("div");
+    let heart = document.createElement("div");
     heart.className = "heart";
     heart.style.left = Math.random() * window.innerWidth + "px";
     heart.style.bottom = "-20px";
-    heart.style.animationDuration = (3 + Math.random() * 3) + "s";
+    heart.style.animationDuration = (2 + Math.random() * 3) + "s";
+    heart.style.width = (12 + Math.random() * 18) + "px";
+    heart.style.height = heart.style.width;
     document.body.appendChild(heart);
-    setTimeout(() => heart.remove(), 6000);
+    setTimeout(() => heart.remove(), 4000);
   }
 }
 </script>
-
-</body>
-</html>
 
 </body>
 </html>
