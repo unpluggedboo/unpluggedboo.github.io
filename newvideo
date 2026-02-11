@@ -1,1 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Starring Avery 🎬</title>
 
+<style>
+body {
+  margin: 0;
+  font-family: "Avenir", Arial, sans-serif;
+  background: linear-gradient(to bottom right, #ff9a9e, #fad0c4);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.video-container {
+  margin-top: 30px;
+}
+
+iframe {
+  width: 80%;
+  max-width: 800px;
+  height: 450px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.next {
+  margin-top: 40px;
+}
+
+.next a {
+  background: white;
+  color: #ff4d6d;
+  padding: 14px 28px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.next a:hover {
+  background: #ffe6eb;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Starring Avery 🎬</h1>
+<p>I prefer this over the Biebs music vid and stripped performance ;)</p>
+
+<div class="video-container">
+  <iframe src="https://drive.google.com/file/d/1Neuv3J6YHGTHrVR_UT7Ee6U1Mu_t3wuw/preview"
+          allow="autoplay; encrypted-media"
+          allowfullscreen>
+  </iframe>
+</div>
+
+<div class="next">
+  <a href="plan.html">Continue →</a>
+</div>
+
+</body>
+</html>
